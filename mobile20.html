@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <meta charset="utf-8"/>
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
+        <link href="./css/mobile20.css" rel="stylesheet" type="text/css"/>
+        <meta content="A_A_P Mockup Replica" name="Joseph Edward"></meta>
+        <title>A_A_P Mockup Replica</title>
+    </head>
+    <!-- <div id="result"></div> -->
+    <script>
+  
+        function displayWindowSize() {
+
+  var w = document.documentElement.clientWidth;
+  var h = document.documentElement.clientHeight;
+
+if(w>1025){
+ location.assign("./desktop20.html");
+}
+
+if((w<1025)&&(w>461)){
+    location.assign("./tablet20.html");
+}
+
+//useful for testing
+document.getElementById("result").innerHTML =
+            "Width: " + w + ", " + "Height: " + h;
+        }
+        window.addEventListener("resize", displayWindowSize);
+        displayWindowSize();
+      </script>
+    <body style="margin: 0;
+ background: rgba(255, 255, 255, 1.0);">
+        <input id="anPageName" name="page" type="hidden" value="mobile20"/>
+        <div class="mobile20">
+            <div style="width: 360px; height: 100%; position:relative; margin:auto;">
+                <div class="group">
+                    <div class="nav">
+                    </div>
+                    <div class="headerbg">
+                    </div>
+                    <div class="search">
+                        <div class="rectangle2">
+                        </div>
+                    </div>
+                    <div class="logoplaceholder">
+                    </div>
+                </div>
+                <img A_A_P-src="./img/mobile20-icons8-search@2x.png" class="icons8search" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                <div class="hero">
+                    <img A_A_P-src="./img/mobile20-bg-image.png" class="bgimage" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                    <div class="loremipsumdolorsi">
+                        Lorem ipsum dolor sit amet, ea est noster accumsan, vim elit aeque an. Eu duo quod elit, posse facer minimum pri eu, ea sit viris ceteros.
+                    </div>
+                    <div class="save10">
+                        Save 10%
+                    </div>
+                    <div class="ipsumdelicatasede">
+                        Ipsum delicata sed ex.
+                    </div>
+                </div>
+                <img A_A_P-src="./img/mobile20-peakpng.png" class="peakpng" src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="/>
+                <div class="a3box">
+                    <div class="rectangle">
+                    </div>
+                </div>
+                <div class="a3box1">
+                    <div class="rectangle">
+                    </div>
+                </div>
+                <div class="a3box2">
+                    <div class="rectangle">
+                    </div>
+                </div>
+                <div class="a3box3">
+                    <div class="rectangle">
+                    </div>
+                </div>
+                <div class="group4">
+                    <div class="header">
+                    </div>
+                    <div class="group5">
+                        <div class="group2">
+                            <div class="leftfooterlinks">
+                                Left Footer Links
+                            </div>
+                            <div class="leftfooterlinkone">
+                                Left Footer Link ONE<br />Left Footer Link TWO
+                            </div>
+                        </div>
+                        <div class="group21">
+                            <div class="leftfooterlinks">
+                                Left Footer Links
+                            </div>
+                            <div class="leftfooterlinkone">
+                                Left Footer Link ONE<br />Left Footer Link TWO
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            A_A_P_isHidden = function(e) {
+                if (!(e instanceof HTMLElement)) return !1;
+                if (getComputedStyle(e).display == "none") return !0; else if (e.parentNode && A_A_P_isHidden(e.parentNode)) return !0;
+                return !1;
+            };
+            A_A_P_loadAsyncSrcForTag = function(tag) {
+                var elements = document.getElementsByTagName(tag);
+                var toLoad = [];
+                for (var i = 0; i < elements.length; i++) {
+                    var e = elements[i];
+                    var src = e.getAttribute("src");
+                    var loaded = (src != undefined && src.length > 0 && src != 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+                    if (loaded) continue;
+                    var asyncSrc = e.getAttribute("A_A_P-src");
+                    if (asyncSrc == undefined || asyncSrc.length == 0) continue;
+                    if (A_A_P_isHidden(e)) continue;
+                    toLoad.push(e);
+                }
+                toLoad.sort(function(a, b) {
+                    return A_A_P_getTop(a) - A_A_P_getTop(b);
+                });
+                for (var i = 0; i < toLoad.length; i++) {
+                    var e = toLoad[i];
+                    var asyncSrc = e.getAttribute("A_A_P-src");
+                    e.setAttribute("src", asyncSrc);
+                }
+            };
+
+            A_A_P_loadAsyncSrc = function(tag) {
+                A_A_P_loadAsyncSrcForTag("img");
+            };
+            var A_A_P_getTop = function(e) {
+                var top = 0;
+                do {
+                    top += e.offsetTop || 0;
+                    e = e.offsetParent;
+                } while (e);
+                return top;
+            };
+            A_A_P_loadAsyncSrc();
+        </script>
+    </body>
+</html>
