@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <link href="./img/car.png" rel="shortcut icon"/>
         <meta charset="utf-8"/>
         <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0" name="viewport"/>
         <link href="./css/mobile20.css" rel="stylesheet" type="text/css"/>
         <meta content="A_A_P Mockup Replica" name="Joseph Edward"></meta>
         <title>A_A_P Mockup Replica</title>
     </head>
-    <!-- <div id="result"></div> -->
     <script>
   
         function displayWindowSize() {
@@ -17,11 +16,11 @@
   var h = document.documentElement.clientHeight;
 
 if(w>1025){
- location.assign("./desktop20.html");
+ location.replace("./desktop20.html");
 }
 
 if((w<1025)&&(w>461)){
-    location.assign("./tablet20.html");
+    location.replace("./tablet20.html");
 }
 
 //useful for testing

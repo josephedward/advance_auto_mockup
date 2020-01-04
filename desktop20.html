@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="./img/favicon.png" rel="shortcut icon"/>
+        <link href="./img/car.png" rel="shortcut icon"/>
+
         <meta charset="utf-8"/>
         <meta content="width=1440, maximum-scale=1.0" name="viewport"/>
         <link href="./css/desktop20.css" rel="stylesheet" type="text/css"/>
@@ -10,53 +11,24 @@
     </head>
     <!-- <div id="result"></div> -->
     <script>
-        // Defining event listener function
   
         function displayWindowSize() {
-  // Get width and height of the window excluding scrollbars
-
+  
   var w = document.documentElement.clientWidth;
   var h = document.documentElement.clientHeight;
-//   switch (w) {
-//   case w > 1025: {
-//     location.assign("./desktop20.html");
-//     break;
-//   }
-//   case w < 1025: {
-//     location.assign("./tablet20.html");
-//     break;
-//   }
 
-//   case w < 461: {
-//     location.assign("./mobile20.html");
-//   }
-
-//   default: {
-//     break;
-//   }
-// }
-
-// if(w>1025){
-//  location.assign("./desktop20.html");
-// }
 
 
 if((w<1025)&&(w>461)){
-    location.assign("./tablet20.html");
+    location.replace("./tablet20.html");
 }
 
 if(w<461){
-location.assign("./mobile20.html");
+location.replace("./mobile20.html");
 }
 
-          // Display result inside a div element
-        //   document.getElementById("result").innerHTML =
-        //     "Width: " + w + ", " + "Height: " + h;
-// displayWindowSize();
         }
-        // Attaching the event listener function to window's resize event
         window.addEventListener("resize", displayWindowSize);
-        // Calling the function for the first time
         displayWindowSize();
       </script>
   
