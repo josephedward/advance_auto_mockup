@@ -17,16 +17,8 @@
   var w = document.documentElement.clientWidth;
   var h = document.documentElement.clientHeight;
 
-
-
-if((w<1025)&&(w>461)){
-    location.replace("./tablet20.html");
-}
-
-if(w<461){
-location.replace("./mobile20.html");
-}
-
+if((w<1025)&&(w>461)){location.replace("./tablet20.html");}
+if(w<461){location.replace("./mobile20.html");}
         }
         window.addEventListener("resize", displayWindowSize);
         displayWindowSize();

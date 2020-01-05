@@ -10,25 +10,20 @@
     </head>
     <script>
   
-        function displayWindowSize() {
-
+  function displayWindowSize() {
   var w = document.documentElement.clientWidth;
   var h = document.documentElement.clientHeight;
 
-if(w>1025){
- location.replace("./desktop20.html");
-}
-
-if((w<1025)&&(w>461)){
+  if (w < 1025 && w > 461) {
     location.replace("./tablet20.html");
+  }
+  if (w < 461) {
+    location.replace("./mobile20.html");
+  }
 }
+window.addEventListener("resize", displayWindowSize);
+displayWindowSize();
 
-//useful for testing
-document.getElementById("result").innerHTML =
-            "Width: " + w + ", " + "Height: " + h;
-        }
-        window.addEventListener("resize", displayWindowSize);
-        displayWindowSize();
       </script>
     <body style="margin: 0;
  background: rgba(255, 255, 255, 1.0);">
